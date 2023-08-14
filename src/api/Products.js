@@ -11,7 +11,7 @@ const getProducts = async ({ query, page, per_page } = {}) => {
   const response = await fetch(`${BASE_URL}?${params}`);
   if (!response.ok) {
     throw new Error(response.status);
-  }console.log(response);
+  };
 
   return response.json();
 };
