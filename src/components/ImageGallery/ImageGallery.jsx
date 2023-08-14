@@ -6,7 +6,6 @@ class ImageGallery extends React.Component {
   
   render() {
     const { images, openModal} = this.props;
-    console.log(images);
     return (
       <ImageGalleryUl>
         {images.map(({ id, webformatURL, tags, largeImageURL }) => (
