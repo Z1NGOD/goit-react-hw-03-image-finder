@@ -18,7 +18,14 @@ export class App extends Component {
     selectedImageUrl: '',
     isModalOpen: false,
   };
-
+  componentDidUpdate(_, prevState) { 
+    if (prevState.images !== this.state.images) {
+      this.setState({
+        prevState: this.state.images
+      })
+    }
+  }
+  
   handleSearchQueryChange = newQuery => {
     this.setState(
       {
